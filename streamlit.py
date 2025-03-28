@@ -7,16 +7,14 @@ from streamlit_timeline import timeline
 # app structure
 col1, col2, col3 = st.columns([1,2,1])
 with col2:  # middle column
-    st.image("Titanic_workers.jpg", width=400) # logo
+    st.image("Titanic_workers.jpg", width=600) # logo
     
 # tabs
 tabs = st.tabs(["Titanic History", "Titanic Dataset", "Titanic Analysis"])
 
 with tabs[0]:
-    st.title("Titanic built by Harland and Wolff")
+    st.title("Timeline of Titanic History")
     st.write("Harland and Wolff shipyard in Belfast, founded in 1861, quickly established itself as a leading shipbuilding entity in the maritime industry. Renowned for its innovative engineering and monumental constructions, the shipyard became globally recognized for its role in crafting the Olympic-class ocean liners for the White Star Line, including the ill-fated RMS Titanic. Here we see a team of workers celebrating the retirement of one of their colleagues in the 60s, a testament to the enduring legacy and community embodied by Harland and Wolff.")
-    st.write("Source: [Wikipedia](https://en.wikipedia.org/wiki/RMS_Titanic)")
-    st.write("Timeline of Titanic History")
     timeline_data = {
   "title": {
     "text": {
