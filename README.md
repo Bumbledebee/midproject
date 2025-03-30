@@ -47,6 +47,7 @@ For machine learning a target column is needed. If the target column in categori
 ## Findings
 The models work better with less columns (e.g. one hotfix encoding for title or embarked is not worth it, as well mapping the few available cabins to nominal encoding as most cabin information is missing).
 Furthermore, logistic regression and GradientBoostingClassifier worked best, KNearestNeighbor did not work too well.
+I found that comparing how columns impact/matter per model is done differently and not easily comparable due to the way the models work.
 
 ## Conclusions
 Mainly this project brought me a step ahead in having functions for EDA (Exploratory Data Analysis), Cleaning and Plotting.
@@ -57,4 +58,4 @@ For Machine learning to compare different dataframes and different data manipula
 Check the presentation folder for my learnings while doing this project.
 
 ## Streamlit
-The project includes a streamlit webapp. You can run it locally with "streamlit run streamlit.py". The app features a picture of my grandfather who worked in Harland and Wolff in the 1960s.
+The project includes a streamlit webapp. You can run it locally with "streamlit run streamlit.py". The app features a picture of my grandfather who worked in Harland and Wolff in the 1960s. In case you cannot run it, you find the picture in the presentation as well.
