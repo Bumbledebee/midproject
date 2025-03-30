@@ -1,43 +1,68 @@
-## Overview
-The goal is to predict survival on the Titanic, where `survived` is the target variable indicating if a passenger survived or not. The dataset includes various features related to the passengers.
+# Midproject: Cloud & GenAI
 
-## Target Variable
-- **`survived`**: Indicates if a passenger survived the Titanic disaster.
-  - `0` = No, the passenger did not survive.
-  - `1` = Yes, the passenger survived.
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Setup Instructions](#setup-instructions)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Project Overview
+This project is part of the Ironhack curriculum and focuses on trying out machine learning methods on an example data set.
 
 ## Features
-The following features are included in the dataset and are used to predict the target variable:
+The example dataset is one from the Titanic passengers and
+the dataset includes the following important columns:
+- **Pclass**: The class of the ticket purchased (1 = First, 2 = Second, 3 = Third).
+- **Name**: The full name of the passenger.
+- **Sex**: The gender of the passenger (male or female).
+- **Age**: The age of the passenger in years.
+- **SibSp**: The number of siblings or spouses aboard the Titanic.
+- **Parch**: The number of parents or children aboard the Titanic.
+- **Ticket**: The ticket number.
+- **Fare**: The fare paid for the ticket.
+- **Cabin**: The cabin number (if available).
+- **Embarked**: The port of embarkation (C = Cherbourg, Q = Queenstown, S = Southampton).
+- **Boat**: The lifeboat number (if the passenger was assigned one).
+- **Body**: The body identification number (if applicable).
+- **Home.Dest**: The intended home destination of the passenger (if available).
+The target columns to predict is:
+- **Survived**: Indicates whether the passenger survived (1) or not (0).
 
-- **`Pclass`**: Ticket class, a proxy for socio-economic status (SES)
-  - `1` = 1st Class (Upper)
-  - `2` = 2nd Class (Middle)
-  - `3` = 3rd Class (Lower)
 
-- **`Name`**: Passenger's name. It includes titles and sometimes family names, which can be used for feature engineering.
+## Technologies Used
+- **Programming Languages**: [Python]
+- **Frameworks**: [Streamlit]
 
-- **`Sex`**: Passenger's sex. 
-  - `male`
-  - `female`
+## Setup Instructions
+1. Clone the repository:
+  ```bash
+  git clone https://github.com/your-username/midproject.git
+  ```
+2. Navigate to the project directory:
+  ```bash
+  cd midproject
+  ```
+3. Install dependencies:
+  ```bash
+  pip install -r requirements.txt
+  ```
+4. Set up environment variables:
+  - Create a `.env` file and add necessary keys (e.g., API keys, cloud credentials).
 
-- **`Age`**: Age in years. It is fractional if less than 1 and estimated as xx.5 if it's estimated.
+5. Run the application:
+  ```bash
+  streamlit run streamlit.py
+  ```
 
-- **`SibSp`**: Number of siblings or spouses aboard the Titanic. Defines family relations in this way:
-  - Sibling = brother, sister, stepbrother, stepsister
-  - Spouse = husband, wife (mistresses and fiancés were ignored)
+## Usage
+1. Access the application via your browser at `http://localhost:5000`.
+2. Follow the on-screen instructions to interact with the web app.
 
-- **`Parch`**: Number of parents or children aboard the Titanic. Defines family relations in this way:
-  - Parent = mother, father
-  - Child = daughter, son, stepdaughter, stepson
-  - Some children travelled only with a nanny, therefore Parch=0 for them.
+## Presentation
+Check the presentation folder for my learnings while doing this project.
 
-- **`Ticket`**: Ticket number. The format varies, and it might contain letters and numbers.
-
-- **`Fare`**: Passenger fare. It varies depending on class, embarkation point, and sometimes other factors.
-
-- **`Cabin`**: Cabin number. The format varies, and cabins might be shared among passengers.
-
-- **`Embarked`**: Port of Embarkation. Indicates where the passenger boarded the Titanic.
-  - `C` = Cherbourg
-  - `Q` = Queenstown
-  - `S` = Southampton
+## License
+This project is licensed under the [MIT License](LICENSE).
