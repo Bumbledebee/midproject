@@ -1,13 +1,14 @@
-# Midproject: Cloud & GenAI
+# Midproject
 
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Setup Instructions](#setup-instructions)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+- [Steps](#steps)
+- [Findings](#findings)
+- [Conclusions](#conclusions)
+- [Presentation](#presentation)
+- [Streamlit](#streamlit)
 
 ## Project Overview
 This project is part of the Ironhack curriculum and focuses on trying out machine learning methods on an example data set.
@@ -28,41 +29,32 @@ the dataset includes the following important columns:
 - **Boat**: The lifeboat number (if the passenger was assigned one).
 - **Body**: The body identification number (if applicable).
 - **Home.Dest**: The intended home destination of the passenger (if available).
-The target columns to predict is:
+
+The target column:
 - **Survived**: Indicates whether the passenger survived (1) or not (0).
 
+For machine learning a target column is needed. If the target column in categorical - in this case even binary - then we use a classification model.
 
 ## Technologies Used
 - **Programming Languages**: [Python]
 - **Frameworks**: [Streamlit]
 
-## Setup Instructions
-1. Clone the repository:
-  ```bash
-  git clone https://github.com/your-username/midproject.git
-  ```
-2. Navigate to the project directory:
-  ```bash
-  cd midproject
-  ```
-3. Install dependencies:
-  ```bash
-  pip install -r requirements.txt
-  ```
-4. Set up environment variables:
-  - Create a `.env` file and add necessary keys (e.g., API keys, cloud credentials).
+## Steps
+1. The data has been taken from this website: [OpenML Titanic Dataset](https://www.openml.org/search?type=data&sort=runs&id=40945&status=active)
+2. The data got checked and cleaned from empty values, empty strings and duplicated rows.
+3. Then I started applying three different classification models with different versions of the dataframe (e.g. more or less columns) and different machine learning data manipulation tactics (e.g. scaling_standard, scaling_minmax, smote, tomek_links). I decided to focus on "accuracy" as my main performance KPI and collect that data in a dataframe.
 
-5. Run the application:
-  ```bash
-  streamlit run streamlit.py
-  ```
+## Findings
+The models work better with less columns (e.g. one hotfix encoding for title or embarked is not worth it, as well mapping the few available cabins to nominal encoding as most cabin information is missing).
+Furthermore, logistic regression and GradientBoostingClassifier worked best, KNearestNeighbor did not work too well.
 
-## Usage
-1. Access the application via your browser at `http://localhost:5000`.
-2. Follow the on-screen instructions to interact with the web app.
+## Conclusions
+Mainly this project brought me a step ahead in having functions for EDA (Exploratory Data Analysis), Cleaning and Plotting.
+For Machine learning to compare different dataframes and different data manipulations methods there is still more room to create more functions and optimise the process.
+
 
 ## Presentation
 Check the presentation folder for my learnings while doing this project.
 
-## License
-This project is licensed under the [MIT License](LICENSE).
+## Streamlit
+The project includes a streamlit webapp. You can run it locally with "streamlit run streamlit.py". The app features a picture of my grandfather who worked in Harland and Wolff in the 1960s.
